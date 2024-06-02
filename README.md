@@ -9,9 +9,11 @@ I'm a Data Analyst/Business Analyst/Data Scientist with expertise in SQL, Python
 <a href="https://github.com/manikantancodes" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="GitHub" height="30" width="40" /></a>
 </p>
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=manikantancodes&label=Profile%20views&color=0e75b6&style=flat" alt="manikantancodes" /> 
-</p>
+<div align="center">
+  <a href="https://github.com/manikantancodes">
+    <img src="https://img.shields.io/github/followers/manikantancodes?label=Follow&style=social" alt="Follow me on GitHub" style="transform: scale(1.5);">
+  </a>
+</div>
 
 [![Follow](https://img.shields.io/github/followers/manikantancodes?label=Follow&style=social)](https://github.com/YOUR_GITHUB_USERNAME)
 
