@@ -1,80 +1,90 @@
-<h1 align="center">Hi there 👋, I'm MANDALMANIKANTAN P</h1>
+# Hi there 👋, I'm MANDALMANIKANTAN P
 
-<h3 align="center">A passionate Data Analyst/Business Analyst/Data Scientist from India</h3>
+I'm a Data Analyst/Business Analyst/Data Scientist with expertise in SQL, Python, and data visualization.
 
-<p align="center">Email: manikantan9944@gmail.com | Phone: 6380853075 | Location : Chennai,India </p>
+
+<h3 align="left">Social</h3>
+<p align="left">
+<a href="https://linkedin.com/in/mandalmanikantan" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="LinkedIn" height="30" width="40" /></a>
+<a href="https://github.com/manikantancodes" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" alt="GitHub" height="30" width="40" /></a>
+</p>
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=manikantancodes&label=Profile%20views&color=0e75b6&style=flat" alt="manikantancodes" /> 
+</p>
+
+[![Follow](https://img.shields.io/github/followers/manikantancodes?label=Follow&style=social)](https://github.com/YOUR_GITHUB_USERNAME)
+
+
+## About Me
+
+- 🔭 I’m currently working on improving my data science skills
+- 🌱 I’m currently learning advanced machine learning techniques and data storytelling
+- 👯 I’m looking to collaborate on open-source data science projects
+- 🤔 I’m looking for help with advanced machine learning techniques
+- 💬 Ask me about SQL, Python, and data visualization
+- 📫 How to reach me: manikantan9944@gmail.com or connect with me on [LinkedIn](https://linkedin.com/in/mandalmanikantan/)
+- 😄 Pronouns: He/Him
+- ⚡ Fun fact: I enjoy turning data into actionable insights that drive business growth
+
+## Skills
+
+- **Programming Languages:** Python (Pandas, NumPy, SciPy, Matplotlib)
+- **Data Analysis:** SQL (SQL Server, MySQL, PostgreSQL), Excel (VLookup, Conditional Formatting, Pivot Tables)
+- **Data Visualization:** Matplotlib, Seaborn, Plotly, Microsoft Power BI, Tableau
+- **Machine Learning:** Scikit-learn, TensorFlow (beginner), Model Optimization, Model Deployment and Productionization, Hyperparameter Tuning
+- **Data Management:** Data Cleaning, Data Preprocessing, Feature Engineering, Data Warehousing, Data Mining, Exploratory Data Analysis (EDA), Python Scripting, SQL and Database Management
+- **Others:** Statistical Analysis, Data Storytelling
+
+## Projects
+
+### [YOUTUBE DATA HARVESTING AND WAREHOUSING USING SQL AND STREAMLIT](https://github.com/manikantancodes/Singapore_Resale_Flat_Prices_Prediction)
+- **Description:** Developed a Streamlit application with Python for comprehensive YouTube channel data analysis, utilizing Google API for channel details.
+- **Technologies:** Python, Streamlit, SQL
+- **Key Achievement:** Streamlined data collection and analysis process, reducing analysis time by 30%.
+
+### [PHONEPE PULSE DATA VISUALIZATION AND EXPLORATION](https://github.com/manikantancodes/Phonepe-pulse)
+- **Description:** Created a user-friendly Streamlit application in Python for interactive data visualization of Phonepe Pulse data.
+- **Technologies:** Python, Pandas, MySQL, Streamlit, Plotly
+- **Key Achievement:** Developed a comprehensive data visualization tool, enabling stakeholders to make data-driven decisions.
+
+### [AIRBNB ANALYSIS](https://github.com/manikantancodes/Airbnb-analysis)
+- **Description:** Developed a Streamlit and Plotly tool for interactive visualization of Airbnb data.
+- **Technologies:** Python, MongoDB Atlas, Pandas, Plotly, Power BI
+- **Key Achievement:** Delivered actionable insights on pricing strategies and occupancy optimization.
+
+### [BREAST CANCER PREDICTION USING ENSEMBLE TECHNIQUES](https://github.com/manikantancodes/Final_project/tree/main/breast-cancer-prediction)
+- **Description:** Developed ML model for breast cancer prediction, enhancing diagnostic accuracy.
+- **Technologies:** Python, Scikit-learn, Random Forest, Gradient Boosting
+- **Key Achievement:** Unveiled variable relationships, fine-tuned models for exceptional performance.
+
+### [SINGAPORE RESALE FLAT PRICES PREDICTING](https://github.com/manikantancodes/Singapore_Resale_Flat_Prices_Prediction)
+- **Description:** Developed a machine learning model to predict resale prices of flats in Singapore.
+- **Technologies:** Python, Streamlit
+- **Key Achievement:** Enhanced decision-making for buyers and sellers by providing reliable resale value estimates.
+
+### [INDUSTRIAL COPPER MODELING](https://github.com/manikantancodes/Industrial_Copper_Modeling)
+- **Description:** Utilized Python scripting for meticulous data preprocessing, ensuring high data integrity.
+- **Technologies:** Python, Streamlit
+- **Key Achievement:** Enhanced pricing strategies and lead classification accuracy through advanced data preprocessing, EDA, and machine learning techniques.
+
+
+## Connect with Me
+
+- [LinkedIn](https://linkedin.com/in/mandalmanikantan/)
+- [GitHub](https://github.com/manikantancodes)
+- Email: manikantan9944@gmail.com
+- Phone: 6380853075
+- Location : Chennai,India
+
+
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=manikantancodes&layout=compact&theme=radical)
+
+## Contact
+
+Feel free to reach out to me via [email](mailto:manikantan9944@gmail.com) for any inquiries or collaborations.
 
 ---
 
-<h3 align="left">Profile Summary</h3>
-
-<p align="left">
-Skilled Data/Business Analyst with expertise in SQL, Python, and data visualization. Proficient in leveraging data-driven insights and innovative solutions to drive business growth. Seeking a challenging role to apply my technical skills and analytical mindset to drive strategic decision-making and process optimization.
-</p>
-
----
-
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://linkedin.com/in/mandalmanikantan" target="_blank" rel="noreferrer">LinkedIn</a> |
-<a href="https://github.com/manikantancodes" target="_blank" rel="noreferrer">GitHub</a>
-</p>
-
----
-
-<h3 align="left">Skills</h3>
-
-<p align="left">
-  <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="MySQL" width="40" height="40"/> 
-  </a> 
-  <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="PostgreSQL" width="40" height="40"/> 
-  </a> 
-  <a href="https://www.python.org" target="_blank" rel="noreferrer"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" width="40" height="40"/> 
-  </a>
-  <a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pandas/pandas-original-wordmark.svg" alt="Pandas" width="40" height="40"/> 
-  </a>
-  <a href="https://numpy.org/" target="_blank" rel="noreferrer"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/numpy/numpy-original-wordmark.svg" alt="NumPy" width="40" height="40"/> 
-  </a>
-  <a href="https://matplotlib.org/" target="_blank" rel="noreferrer"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/matplotlib/matplotlib-original.svg" alt="Matplotlib" width="40" height="40"/> 
-  </a>
-  <a href="https://scipy.org/" target="_blank" rel="noreferrer"> 
-    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/scipy/scipy-original.svg" alt="SciPy" width="40" height="40"/> 
-  </a>
-  <a href="https://powerbi.microsoft.com/" target="_blank" rel="noreferrer"> 
-    <img src="https://www.vectorlogo.zone/logos/microsoft_powerbi/microsoft_powerbi-icon.svg" alt="Power BI" width="40" height="40"/> 
-  </a>
-  <a href="https://www.tableau.com/" target="_blank" rel="noreferrer"> 
-    <img src="https://www.vectorlogo.zone/logos/tableau/tableau-icon.svg" alt="Tableau" width="40" height="40"/> 
-  </a>
-  <a href="https://www.microsoft.com/en-us/microsoft-365/excel" target="_blank" rel="noreferrer"> 
-    <img src="https://cdn.worldvectorlogo.com/logos/microsoft-excel-2013.svg" alt="Excel" width="40" height="40"/> 
-  </a>
-</p>
-
----
-
-<h3 align="left">GitHub Stats</h3>
-
-<p align="left">
-  <img src="https://github-readme-stats.vercel.app/api?username=manikantancodes&show_icons=true&theme=radical" alt="Manikantancodes's GitHub stats" />
-</p>
-<p align="left">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=manikantancodes&layout=compact&theme=radical" alt="Top Languages" />
-</p>
-
----
-
-<h3 align="left">Contact</h3>
-<p align="left">
-Feel free to reach out to me via <a href="mailto:manikantan9944@gmail.com">email</a> for any inquiries or collaborations.
-</p>
-
----
-
-<p align="center">Thank you for visiting my profile!</p>
+Thank you for visiting my profile!
