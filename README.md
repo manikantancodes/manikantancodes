@@ -15,8 +15,6 @@ I'm a Data Analyst/Business Analyst/Data Scientist with expertise in SQL, Python
   </a>
 </div>
 
-[![Follow](https://img.shields.io/github/followers/manikantancodes?label=Follow&style=social)](https://github.com/YOUR_GITHUB_USERNAME)
-
 
 ## About Me
 
