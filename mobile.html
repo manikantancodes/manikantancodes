@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Mandal Manikantan's Portfolio - Mobile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Base Styles */
+        :root {
+            --primary-color: #007bff;
+            --text-color: #2d2e32;
+            --bg-color: #ffffff;
+            --section-padding: 2rem 1.5rem;
+            --border-radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        /* Mobile Header */
+        .mobile-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: linear-gradient(120deg, #ffffff, #f8f9fa);
+            background-size: 200% 200%;
+            animation: gradient 15s ease infinite;
+            padding: 0.6rem 1rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .logo-text {
+            font-size: 0.8rem;
+            color: #333;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .logo-text::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: linear-gradient(90deg, #007bff, #00bcd4);
+            transition: width 0.3s ease;
+        }
+
+        .logo-text:hover::after {
+            width: 100%;
+        }
+
+        .logo-highlight {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #007bff;
+            padding: 0 3px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .logo-highlight:hover {
+            color: #0056b3;
+            transform: translateY(-1px);
+        }
+
+        .menu-toggle {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: #007bff;
+            transition: all 0.3s ease;
+            border-radius: 50%;
+            padding: 8px;
+            margin-left: 10px;
+        }
+
+        .menu-toggle i {
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        /* Media queries for different screen sizes */
+        @media screen and (max-width: 480px) {
+            .menu-toggle {
+                width: 35px;
+                height: 35px;
+            }
+            
+            .menu-toggle i {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media screen and (max-width: 320px) {
+            .menu-toggle {
+                width: 32px;
+                height: 32px;
+            }
+            
+            .menu-toggle i {
+                font-size: 1.2rem;
+            }
+
+            .logo-text {
+                font-size: 0.75rem;
+            }
+
+            .logo-highlight {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Mobile Navigation */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            height: 100vh;
+            background: var(--bg-color);
+            padding: 5rem 2rem;
+            transition: 0.3s ease;
+            z-index: 1001;
+            box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .menu-links {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .menu-link {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .menu-link:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: calc(4rem + var(--section-padding)) 1.5rem 2rem;
+            text-align: center;
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+                        url('assets/hero-bg.jpg') center/cover;
+        }
+
+        .hero-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-education {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .hero-cta:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .download-btn {
+            background: #4CAF50;
+        }
+
+        .download-btn:hover {
+            background: #3e8e41;
+        }
+
+        .contact-btn {
+            background: #03A9F4;
+        }
+
+        .contact-btn:hover {
+            background: #039BE5;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: #f8f9fa;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Section Styles */
+        section {
+            padding: var(--section-padding);
+            border-bottom: 1px solid #eee;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+
+        .section__text__p1 {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-text {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Education Section */
+        .education-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .education-card {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+        }
+
+        .education-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .education-school {
+            font-size: 0.85rem;
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+        }
+
+        .education-spec {
+            font-size: 0.8rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-points {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            padding-left: 1.2rem;
+        }
+
+        .education-points li {
+            font-size: 0.8rem;
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 0.4rem;
+        }
+
+        /* Skills Section */
+        .skills-category {
+            margin-bottom: 2rem;
+        }
+
+        .skills-category h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-card {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .skill-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Project Section Styles */
+        .projects-grid {
+            display: grid;
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-image-container {
+            overflow: hidden;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+        }
+
+        .project-content {
+            padding: 1.5rem;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 0.8rem 0;
+            color: var(--text-color);
+        }
+
+        .project-description {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .tech-tag {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            display: inline-block;
+            font-weight: 500;
+        }
+
+        .tech-tag:contains('Python') {
+            background-color: #306998;
+            color: white;
+        }
+
+        .tech-tag:contains('Machine Learning'), 
+        .tech-tag:contains('ML'),
+        .tech-tag:contains('AI') {
+            background-color: #FF6B6B;
+            color: white;
+        }
+
+        .tech-tag:contains('Data Analysis'),
+        .tech-tag:contains('Analytics') {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .tech-tag:contains('Healthcare') {
+            background-color: #E91E63;
+            color: white;
+        }
+
+        .tech-tag:contains('Banking'),
+        .tech-tag:contains('Real Estate') {
+            background-color: #673AB7;
+            color: white;
+        }
+
+        .tech-tag:contains('Web'),
+        .tech-tag:contains('API') {
+            background-color: #00BCD4;
+            color: white;
+        }
+
+        .tech-tag:contains('SQL'),
+        .tech-tag:contains('Database') {
+            background-color: #FF9800;
+            color: white;
+        }
+
+        .tech-tag:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 0.65rem;
+            transition: all 0.3s ease;
+            margin-top: 6px;
+        }
+
+        .project-link:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .project-link i {
+            font-size: 0.65rem;
+            margin-right: 3px;
+        }
+
+        @media (max-width: 768px) {
+            .project-image {
+                height: 180px;
+            }
+
+            .project-content {
+                padding: 1.25rem;
+            }
+
+            .project-title {
+                font-size: 1.1rem;
+            }
+
+            .project-description {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .section__text__p1 {
+                font-size: 0.9rem;
+            }
+
+            .project-title {
+                font-size: 1.1rem;
+            }
+
+            .project-description {
+                font-size: 0.85rem;
+            }
+
+            .tech-tag {
+                font-size: 0.75rem;
+                padding: 3px 6px;
+            }
+
+            .project-link {
+                font-size: 0.8rem;
+                padding: 4px 8px;
+            }
+        }
+
+        /* Contact Section */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .contact-text {
+            flex: 1;
+        }
+
+        .contact-label {
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+
+        .contact-value {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .copy-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin-left: 10px;
+            color: var(--text-color);
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        .copy-btn:hover {
+            color: var(--primary-color);
+        }
+
+        #phone-number {
+            margin-left: 8px;
+        }
+
+        /* Overlay */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s ease;
+            z-index: 1000;
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Intro Section */
+        #intro {
+            padding: 2rem 1rem;
+            text-align: center;
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            border-radius: 10px;
+            margin: 1rem;
+        }
+
+        .section__text {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .section__text__p2 {
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Contact Section */
+        .contact-info-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        .contact-info-item i {
+            color: #007bff;
+            font-size: 1.1rem;
+            width: 20px;
+            text-align: center;
+        }
+
+        .contact-info-item a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info-item a:hover {
+            color: #007bff;
+        }
+
+        @media (max-width: 480px) {
+            .title {
+                font-size: 1.75rem;
+            }
+
+            .section__text__p1 {
+                font-size: 0.9rem;
+            }
+
+            .section__text__p2 {
+                font-size: 0.85rem;
+            }
+
+            .contact-info-item {
+                font-size: 0.85rem;
+            }
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-text">Mandal</span>
+                <span class="logo-highlight">Manikantan</span>
+                <span class="logo-text">Portfolio</span>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu">
+        <div class="menu-links">
+            <a href="#about" class="menu-link">About</a>
+            <a href="#education" class="menu-link">Education</a>
+            <a href="#skills" class="menu-link">Skills</a>
+            <a href="#projects" class="menu-link">Projects</a>
+            <a href="#contact" class="menu-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Intro Section -->
+        <section id="intro">
+            <div class="section__text">
+                <p class="section__text__p1">Hello, I'm</p>
+                <h1 class="title">Mandal Manikantan</h1>
+                <p class="section__text__p2">Data Scientist & ML Engineer specializing in building intelligent solutions that transform complex data into actionable business insights.</p>
+            <!-- Buttons Section -->
+<div class="profile-actions">
+    <div class="btn-container" style="margin-bottom: 12px; display: flex; justify-content: center; gap: 8px; flex-direction: column; padding: 0 15px;">
+        <!-- Download CV Button -->
+        <button class="btn btn-cv" style="
+            padding: 8px 16px; 
+            width: 100%;
+            max-width: 200px;
+            margin: 0 auto; 
+            font-size: 0.9rem; 
+            font-family: 'Montserrat', sans-serif;
+            color: #1a1a1a; 
+            background: white; 
+            border: 1.5px solid #1a1a1a; 
+            border-radius: 25px; 
+            cursor: pointer; 
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);" 
+        onclick="window.open('./assets/Manikantan Data Scientist Resume.pdf')">
+            <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 6px;">
+                <i class="fas fa-download" style="font-size: 0.9rem;"></i>
+                <span style="font-weight: 600;">Download CV</span>
+            </div>
+        </button>
+        
+        <!-- Contact Info Button -->
+        <button class="btn btn-contact" style="
+            padding: 8px 16px;
+            width: 100%;
+            max-width: 200px;
+            margin: 0 auto; 
+            font-size: 0.9rem; 
+            font-family: 'Montserrat', sans-serif;
+            color: #1a1a1a; 
+            background: white; 
+            border: 1.5px solid #1a1a1a; 
+            border-radius: 25px; 
+            cursor: pointer; 
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);" 
+        onclick="location.href='#contact'">
+            <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 6px;">
+                <i class="fas fa-envelope" style="font-size: 0.9rem;"></i>
+                <span style="font-weight: 600;">Contact Info</span>
+            </div>
+        </button>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="socials-container" style="display: flex; justify-content: center; margin-top: 12px; gap: 16px;">
+        <a href="https://www.linkedin.com/in/mandalmanikantan/" target="_blank" class="social-icon">
+            <img src="./assets/linkedin.png" alt="LinkedIn" style="width: 28px; height: 28px; transition: transform 0.3s ease;" />
+        </a>
+        <a href="https://github.com/manikantancodes" target="_blank" class="social-icon">
+            <img src="./assets/github.png" alt="GitHub" style="width: 28px; height: 28px; transition: transform 0.3s ease;" />
+        </a>
+    </div>
+
+    <style>
+        .btn:hover {
+            transform: translateY(-1px);
+            background: #1a1a1a !important;
+            color: white !important;
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .social-icon img:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 380px) {
+            .btn {
+                font-size: 0.85rem !important;
+                padding: 6px 14px !important;
+            }
+        }
+    </style>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-text">
+                As a Data Scientist with a unique blend of technical expertise and business acumen, I bridge the gap between data analytics and strategic decision-making. My dual masters in Data Science and Business Administration enables me to approach problems with both analytical precision and business context.
+            </p>
+            <p class="section-text">
+                I specialize in developing machine learning models, performing advanced data analysis, and creating intuitive visualizations that drive business value. My experience spans customer analytics, predictive modeling, and supply chain optimization, where I've consistently delivered solutions that impact bottom-line results.
+            </p>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <h2 class="section-title">Education</h2>
+            <div class="education-timeline">
+                <div class="education-card">
+                    <h3>Master of Business Administration (MBA)</h3>
+                    <p class="education-school">Saveetha University, Chennai</p>
+                    <p class="education-spec">Specializations: Marketing, Logistics, and Supply Chain Management</p>
+                    <ul class="education-points">
+                        <li>Gained expertise in business strategies, market analysis, and efficient supply chain operations.</li>
+                        <li>Conducted case studies on real-world logistics challenges and presented actionable solutions.</li>
+                    </ul>
+                </div>
+
+                <div class="education-card">
+                    <h3>Master of Data Science</h3>
+                    <p class="education-school">GUVI Institute, Chennai</p>
+                    <ul class="education-points">
+                        <li>Focused on data analysis, machine learning, and statistical modeling.</li>
+                        <li>Key Projects: Developed predictive models, performed data preprocessing, and created actionable insights using machine learning techniques.</li>
+                    </ul>
+                </div>
+
+                <div class="education-card">
+                    <h3>Bachelor of Engineering (B.E)</h3>
+                    <p class="education-school">Loyola Institute of Technology, Chennai</p>
+                    <p class="education-spec">Electronics and Communication Engineering</p>
+                    <ul class="education-points">
+                        <li>Acquired a strong foundation in electronic systems and signal processing.</li>
+                        <li>Participated in technical projects that bridged engineering principles with practical applications.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <h2 class="section-title">Skills</h2>
+            
+            <div class="skills-category">
+                <h3>Data Science and Analytics</h3>
+                <div class="skills-grid">
+                    <div class="skill-card skill-data-science">
+                        <i class="fas fa-chart-line skill-icon"></i>
+                        <h4>Statistical Analysis</h4>
+                        <ul>
+                            <li>Regression</li>
+                            <li>Hypothesis Testing</li>
+                            <li>A/B Testing</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card skill-machine-learning">
+                        <i class="fas fa-brain skill-icon"></i>
+                        <h4>Machine Learning</h4>
+                        <ul>
+                            <li>Supervised Learning</li>
+                            <li>Unsupervised Learning</li>
+                            <li>Model Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>Data Visualization</h3>
+                <div class="skills-grid">
+                    <div class="skill-card skill-data-visualization">
+                        <i class="fas fa-chart-bar skill-icon"></i>
+                        <h4>Tools</h4>
+                        <ul>
+                            <li>Power BI</li>
+                            <li>Tableau</li>
+                            <li>Plotly</li>
+                            <li>Seaborn</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>Programming</h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fab fa-python skill-icon"></i>
+                        <h4>Python</h4>
+                        <ul>
+                            <li>Pandas</li>
+                            <li>NumPy</li>
+                            <li>SciPy</li>
+                            <li>Flask</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-database skill-icon"></i>
+                        <h4>SQL</h4>
+                        <ul>
+                            <li>Complex Queries</li>
+                            <li>Database Management</li>
+                            <li>PostgreSQL</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <p class="section__text__p1">Browse My Recent</p>
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="./assets/Customer Segmentation.jpg" alt="Customer Segmentation" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Customer Segmentation</h3>
+                        <p class="project-description">Advanced customer segmentation using machine learning algorithms for targeted marketing strategies.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Data Analysis</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/manikantancodes/customer-segmentation" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="./assets/Term Deposit Prediction.jpg" alt="Term Deposit Prediction" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Term Deposit Prediction</h3>
+                        <p class="project-description">Predictive modeling for bank term deposit success using machine learning.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">Banking</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/manikantancodes/term-deposit" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="./assets/Breast Cancer Prediction.jpg" alt="Breast Cancer Prediction" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Breast Cancer Prediction</h3>
+                        <p class="project-description">Machine learning model for early cancer detection and diagnosis.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Healthcare</span>
+                            <span class="tech-tag">ML</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/manikantancodes/breastcancer" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="./assets/Singapore Flat Price Prediction.jpg" alt="Singapore Flat Price Prediction" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Singapore Flat Price Prediction</h3>
+                        <p class="project-description">Real estate price prediction model for Singapore housing market.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Real Estate</span>
+                            <span class="tech-tag">ML</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/manikantancodes/singaporeflat" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="./assets/Industrial Copper Modeling.jpg" alt="Industrial Copper Modeling" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Industrial Copper Modeling</h3>
+                        <p class="project-description">Price prediction and analysis for industrial copper market.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Industry</span>
+                            <span class="tech-tag">ML</span>
+                            <span class="tech-tag">Analysis</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/manikantancodes/coppermodeling" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="./assets/BizCardOCR.jpg" alt="BizCardOCR" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">BizCardOCR</h3>
+                        <p class="project-description">Business card text extraction using OCR technology.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">OCR</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">CV</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/manikantancodes/bizcardocr" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="./assets/Airbnb Data Analysis.jpg" alt="Airbnb Data Analysis" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Airbnb Data Analysis</h3>
+                        <p class="project-description">Comprehensive analysis of Airbnb market data and trends.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Data Analysis</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Visualization</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/manikantancodes/airbnbanalysis" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="./assets/PhonePe Pulse Data Visualization.jpg" alt="PhonePe Pulse Data Visualization" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">PhonePe Pulse Visualization</h3>
+                        <p class="project-description">Interactive visualization of PhonePe transaction data.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Visualization</span>
+                            <span class="tech-tag">Data</span>
+                            <span class="tech-tag">Analytics</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/manikantancodes/phonepepulse" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="./assets/project-1.jpg" alt="YouTube Data Analysis" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">YouTube Data Analysis</h3>
+                        <p class="project-description">Analysis of YouTube trends and content performance.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Data Mining</span>
+                            <span class="tech-tag">Analysis</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/manikantancodes/youtubeharvest" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 10 -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="./assets/Blinkit Data Analysis.jpg" alt="Blinkit Data Analysis" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Blinkit Data Analysis</h3>
+                        <p class="project-description">Analysis of Blinkit delivery and customer behavior data.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Analytics</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Business</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/manikantancodes/blinkitanalysis" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 11 -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="./assets/HR Analytics Power BI Dashboard.jpg" alt="HR Analytics Power BI Dashboard" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">HR Analytics Dashboard</h3>
+                        <p class="project-description">Interactive HR metrics visualization using Power BI.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">HR</span>
+                            <span class="tech-tag">Analytics</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/manikantancodes/hranalytics" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 12 -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="./assets/Movie Search App with LLM Model.jpg" alt="Movie Search App with LLM Model" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Movie Search App (LLM)</h3>
+                        <p class="project-description">AI-powered movie search application using LLM.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">LLM</span>
+                            <span class="tech-tag">AI</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/manikantancodes/moviesearch" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 13 -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="./assets/Stock Market Analysis Dashboard.jpg" alt="Stock Market Analysis Dashboard" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Stock Market Analysis</h3>
+                        <p class="project-description">Stock market trends and performance analysis dashboard.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Finance</span>
+                            <span class="tech-tag">Analysis</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/manikantancodes/stockanalysis" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 14 -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="./assets/Delivery Route Optimization.jpg" alt="Delivery Route Optimization" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Delivery Route Optimization</h3>
+                        <p class="project-description">Optimizing delivery routes for efficient logistics.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Logistics</span>
+                            <span class="tech-tag">Optimization</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/manikantancodes/routeoptimization" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 15 -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="./assets/Supply Chain Inventory Optimization.jpg" alt="Supply Chain Inventory Optimization" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Supply Chain Optimization</h3>
+                        <p class="project-description">Inventory and supply chain optimization system.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Supply Chain</span>
+                            <span class="tech-tag">ML</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/manikantancodes/supplychain" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 16 -->
+                <div class="project-card">
+                    <div class="project-image-container">
+                        <img src="./assets/Crop Yield Prediction.jpg" alt="Crop Yield Prediction" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Crop Yield Prediction</h3>
+                        <p class="project-description">ML-based crop yield prediction system for agriculture.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Agriculture</span>
+                            <span class="tech-tag">ML</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/manikantancodes/cropyield" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> View Project
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <p class="section__text__p1">Get in Touch</p>
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-info-container">
+                <div class="contact-info-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:manikantan9944@gmail.com">manikantan9944@gmail.com</a>
+                    <button onclick="copyEmail()" class="copy-btn">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fas fa-phone"></i>
+                    <span id="phone-number">+91 6380853075</span>
+                    <button onclick="copyPhoneNumber()" class="copy-btn">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/manikantan-r-ds-ai/" target="_blank">LinkedIn Profile</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const overlay = document.querySelector('.overlay');
+        const menuLinks = document.querySelectorAll('.menu-link');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                toggleMenu();
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Scroll Animation for Header
+        const header = document.querySelector('.mobile-header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll <= 0) {
+                header.classList.remove('scroll-up');
+                return;
+            }
+            
+            if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
+                header.classList.remove('scroll-up');
+                header.classList.add('scroll-down');
+            } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
+                header.classList.remove('scroll-down');
+                header.classList.add('scroll-up');
+            }
+            lastScroll = currentScroll;
+        });
+
+        // Copy to Clipboard
+        function copyToClipboard(id) {
+            const text = document.getElementById(id).textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                alert(`Copied ${id} to clipboard!`);
+            });
+        }
+
+        function copyPhoneNumber() {
+            copyToClipboard('phone-number');
+        }
+
+        function copyEmail() {
+            const email = document.querySelector('a[href="mailto:manikantan9944@gmail.com"]').textContent;
+            navigator.clipboard.writeText(email).then(() => {
+                alert(`Copied email to clipboard!`);
+            });
+        }
+
+        // Device detection and redirection
+        function detectDevice() {
+            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) 
+                         || window.innerWidth <= 768;
+            
+            const currentPage = window.location.pathname.split('/').pop();
+            
+            if (isMobile && currentPage === 'index.html') {
+                window.location.href = 'mobile.html';
+            } else if (!isMobile && currentPage === 'mobile.html') {
+                window.location.href = 'index.html';
+            }
+        }
+
+        // Run on page load
+        detectDevice();
+
+        // Run on resize with debounce
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(detectDevice, 250);
+        });
+    </script>
+</body>
+</html>
