@@ -38,6 +38,9 @@ AI & Automation:  OpenAI | LangChain | n8n | GPTs
 Design:           Canva | Adobe XD
 Marketing:        Meta Business Suite | Google Ads | WhatsApp API
 Infra & Tools:    Git | VS Code | Firebase
+
+
+
 💡 My Work Philosophy
 🧠 Innovation should be visual, intelligent, and scalable
 
