@@ -39,3 +39,29 @@ Design:           Canva | Adobe XD
 Marketing:        Meta Business Suite | Google Ads | WhatsApp API
 Infra & Tools:    Git | VS Code | Firebase
 
+
+
+
+💡 My Work Philosophy
+🧠 Innovation should be visual, intelligent, and scalable
+
+⚡ Speed is a feature — launch fast, learn faster
+
+🎯 Automation beats repetition — every time
+
+📊 Data + Design > Opinions
+
+🤝 Relationships are built on clarity, honesty, and delivery
+
+📬 Connect With Me
+🌐 Website: www.navigotechsolutions.com
+
+📧 Email: manikantan@navigotechsolutions.com
+
+📍 Location: Chennai, Tamil Nadu, India
+
+🔗 LinkedIn: www.linkedin.com/in/mandalmanikantan
+
+
+
+
