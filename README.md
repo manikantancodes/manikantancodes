@@ -39,6 +39,7 @@ Design:           Canva | Adobe XD
 Marketing:        Meta Business Suite | Google Ads | WhatsApp API
 Infra & Tools:    Git | VS Code | Firebase
 
+bash```
 
 
 
