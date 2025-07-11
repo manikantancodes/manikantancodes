@@ -28,7 +28,7 @@ At NaviGo Tech Solutions, we offer full-stack digital solutions:
 
 ### ⚒️ Tech Stack & Tools
 
-```bash
+
 Languages:        JavaScript | Python | HTML/CSS 
 Frameworks:         Flask 
 AI & Automation:  OpenAI | LangChain | n8n | GPTs
