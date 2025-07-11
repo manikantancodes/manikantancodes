@@ -49,7 +49,7 @@ Infra & Tools:    Git | VS Code | Firebase
 📬 Connect With Me
 🌐 Website: www.navigotechsolutions.com
 
-📧 Email: careers@navigotechsolutions.com
+📧 Email: manikantan@navigotechsolutions.com
 
 📍 Location: Chennai, Tamil Nadu, India
 
