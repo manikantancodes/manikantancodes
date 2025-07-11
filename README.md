@@ -29,29 +29,13 @@ At NaviGo Tech Solutions, we offer full-stack digital solutions:
 ### ⚒️ Tech Stack & Tools
 
 
-Languages:        JavaScript | Python | HTML/CSS 
-Frameworks:         Flask 
+### ⚒️ Tech Stack & Tools
+
+```bash
+Languages:        JavaScript | Python | HTML/CSS
+Frameworks:       Flask
 AI & Automation:  OpenAI | LangChain | n8n | GPTs
 Design:           Canva | Adobe XD
 Marketing:        Meta Business Suite | Google Ads | WhatsApp API
-Infra & Tools:    Git | VS Code | Firebase 
-💡 My Work Philosophy
-🧠 Innovation should be visual, intelligent, and scalable
-
-⚡ Speed is a feature — launch fast, learn faster
-
-🎯 Automation beats repetition — every time
-
-📊 Data + Design > Opinions
-
-🤝 Relationships are built on clarity, honesty, and delivery
-
-📬 Connect With Me
-🌐 Website: www.navigotechsolutions.com
-
-📧 Email: manikantan@navigotechsolutions.com
-
-📍 Location: Chennai, Tamil Nadu, India
-
-🔗 LinkedIn: linkedin.com/in/mandalmanikantan
+Infra & Tools:    Git | VS Code | Firebase
 
