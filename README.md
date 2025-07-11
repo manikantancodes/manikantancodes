@@ -5,7 +5,7 @@
 
 ### 🚀 About Me
 
-I'm the founder of[**NaviGo Tech Solutions**](https://www.navigotechsolutions.com) a modern AI-driven digital agency based in **Chennai, India** 🇮🇳. I help brands grow smarter — blending design, automation, and intelligence to scale businesses faster and better.
+I'm the founder of [**NaviGo Tech Solutions**](https://www.navigotechsolutions.com) a modern AI-driven digital agency based in **Chennai, India** 🇮🇳. I help brands grow smarter — blending design, automation, and intelligence to scale businesses faster and better.
 
 We’re on a mission to empower Indian startups and traditional businesses with **AI-powered tools**, **scalable digital systems**, and **results-focused marketing**.
 
